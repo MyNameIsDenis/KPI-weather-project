@@ -19,8 +19,20 @@ function getData() {
     document.getElementById("location").innerHTML = location;
     document.getElementById("temp").innerHTML = temp_C + "°C";
     document.getElementById("img").src = 'http:' + condition;
-    
+
+
+    changeColor(temp_C);
   }
 
+  getData()
 
+  select.addEventListener('change', (event) => {
+    city = event.target.value;
+    getData()
+  })
+
+  input.addEventListener("change", (event) => {
+    city = event.target.value;
+    getData()
+  })
 }
