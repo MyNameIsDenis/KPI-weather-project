@@ -8,4 +8,12 @@ function getData() {
   let url = `http://api.weatherapi.com/v1/current.json?key=5be5d4c23c00497fb41144549230306&q=${city}&aqi=no`;
   xhr.open("GET", url);
   xhr.send();
+
+  xhr.onload = function () {
+    let response = JSON.parse(xhr.response);
+
+    let location = response.location.name;
+    let temp_C = response.current.temp_c;
+    let condition = response.current.condition.icon;
+  }
 }
