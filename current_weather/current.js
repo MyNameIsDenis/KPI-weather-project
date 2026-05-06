@@ -15,5 +15,12 @@ function getData() {
     let location = response.location.name;
     let temp_C = response.current.temp_c;
     let condition = response.current.condition.icon;
+
+    document.getElementById("location").innerHTML = location;
+    document.getElementById("temp").innerHTML = temp_C + "°C";
+    document.getElementById("img").src = 'http:' + condition;
+    
   }
+
+
 }
