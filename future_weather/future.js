@@ -34,4 +34,22 @@ function getData() {
             `
         }
     }
+
 }
+
+getData()
+
+select.addEventListener('change', (event) => {
+    city = event.target.value;
+    getData()
+})
+
+daysSelect.addEventListener("change", (event) => {
+    days = event.target.value;
+    getData();
+})
+
+input.addEventListener("change", (event) => {
+    city = event.target.value;
+    getData()
+})
